@@ -20,7 +20,8 @@ const development = {
     google_client_id: process.env.CONNECTIFY_GOOGLE_CLIENT_ID,
     google_client_secret: process.env.CONNECTIFY_GOOGLE_CLIENT_SECRET,
     google_call_back_url: process.env.CONNECTIFY_GOOGLE_CALL_BACK_URL,
-    jwt_secret: process.env.CONNECTIFY_JWT_SECRET
+    jwt_secret: process.env.CONNECTIFY_JWT_SECRET,
+    db_pass: process.env.CONNECTIFY_DB_PASSWORD
 }
 
 
