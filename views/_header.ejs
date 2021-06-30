@@ -1,22 +1,32 @@
 <header>
-    page header
+<!-- 
+    <section id="Navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">Logo</a>
+                <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                  <ul class="navbar-nav">
+                    <div id="container">
+                        <% if(!locals.user){ %>
+                          <div class="login">
+                            <button type="button" style="margin-right: 5px;" class="btn btn-light"><a href="/users/sign-in">Sign In</a></button>
+                            <button type="button" class="btn btn-info"><a href="/users/sign-up">Sign Up</a></button>
+                          </div>
+                        <% }else{ %>
+                          <div class="login">
+                            <span><a class="name-css" href="/users/profile"><%= locals.user.name %></a></span>
+                            <button type="button" class="btn btn-danger"><a class="display-name" href="/users/sign-out">Sign Out</a></button>
+                          </div>
+                        <% } %>
+                    </div>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+    </section> -->
 
-    <ul>
-        <% if (locals.user){ %>
-            <li>
-                <a href="/users/profile"><%= locals.user.name %></a>
-            </li>
-            <li>
-                <a href="/users/sign-out">Sign Out</a>
-            </li>
-        <% } else{ %>
-            <li>
-                <a href="/users/sign-in">Sign In</a>
-            </li>
 
-            <li>
-                <a href="/users/sign-up">Sign Up</a>
-            </li>
-        <% } %>
-    </ul>
 </header>
