@@ -3,7 +3,7 @@ class ChatEngine{
         this.chatBox = $( `#${chatBoxId}`);
         this.userEmail = userEmail;
 
-        this.socket = io.connect('http://localhost:5000' , { transports : ['websocket'] });
+        this.socket = io.connect('localhost:5000' , { transports : ['websocket'] });
         // this.socket = io.connect('localhost:5000');
         if(this.userEmail){
             this.connectionHandler();
@@ -34,7 +34,7 @@ class ChatEngine{
                 self.socket.emit('send_message', {
                     message: msg,
                     user_email: self.userEmail,
-                    chatroom: 'codeial'
+                    chatroom: 'connectify'
                 });
             }
         });

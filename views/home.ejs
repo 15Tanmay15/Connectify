@@ -1,54 +1,67 @@
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="/css/chat_box.css">
+<link rel="stylesheet" href="/css/users.css">
 
 
 
 <div id="home-container">
     <section id="feed-posts">
-            <h1>Posts</h1>
-            <% if(locals.user){ %>
-            <form action="/posts/create" id="new-post-form" method="POST">
-                <textarea name="content" id="post-textarea" placeholder="Type Here..." required></textarea>
-                <input type="submit" value="Post">
-            </form>
-            <% } %>
-        
-            <div id="posts-list-container">
-                <ul class="aligning">
-                    <% for(post of posts){ %>
+        <h1>Posts</h1>
+        <% if(locals.user){ %>
+        <form action="/posts/create" id="new-post-form" method="POST">
+            <textarea name="content" id="post-textarea" placeholder="Type Here..." required></textarea>
+            <input type="submit" value="Post" style="height: 30px;
+            width: 60px;
+            position: relative;
+            bottom: 10px;"
+        }>
+        </form>
+        <% } %>
 
-                    <%- include('_post') -%>
+        <div id="posts-list-container">
+            <ol class="aligning">
+                <% for(post of posts){ %>
 
-                    <%} %>
-                </ul>
-            </div>
-        </section>
+                <%- include('_post') -%>
+
+                <%} %>
+            </ol>
+        </div>
+    </section>
 
 
-        <section id="user-friends">
-            <h1>Users</h1>
-            <ul type="none">
+    <section id="user-friends">
+        <h1>Users</h1>
+        <ol>
             <% for(u of all_users){%>
 
-                <li>
+            <!-- <li id="list-item">
                     <a style="text-decoration: none; "href="/users/profile/<%= u.id %>"><%= u.name %></a>
-                </li>
+                </li> -->
+            <li style="background-color: rgb(32 57 88);">
+                <a style="text-decoration: none; color: white;" href="/users/profile/<%= u.id %>"><div class="user-block">
+                    <h3 class="user-name">
+                        <%= u.name %>
+                    </h3>
+                </div>
+                </a>
+            </li>
 
             <% } %>
-        </ul>
-        </section>
+        </ol>
+    </section>
 
-        <%- include('_chat_box.ejs') -%>
+    <%- include('_chat_box.ejs') -%>
 </div>
 
 <!-- importing this script for creating the comments -->
-<script src="/js/home_post_comments.js" ></script>
+<script src="/js/home_post_comments.js"></script>
 <script src="/js/home_posts.js"></script>
 
 <!-- CHANGE :: import the script file for toggle likes, also run it over for the already present posts and comments on the page -->
 <script src="js/toggle_likes.js"></script>
 <script>
-    $('.toggle-like-button').each(function(){
+    $('.toggle-like-button').each(function () {
         let self = this;
         let toggleLike = new ToggleLike(self);
     });
