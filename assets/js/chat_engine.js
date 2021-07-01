@@ -4,7 +4,7 @@ class ChatEngine{
         this.userEmail = userEmail;
 
         // this.socket = io.connect('https://connectify-backened.herokuapp.com/' , { transports : ['websocket'] });
-        this.socket = io.connect('https://connectify-backened.herokuapp.com/');
+        this.socket = io.connect('https://connectify-backened.herokuapp.com:5000/');
         if(this.userEmail){
             this.connectionHandler();
         }
