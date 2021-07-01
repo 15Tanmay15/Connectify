@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* body{
+    font-family: 'Balsamiq Sans', cursive;
+} */
+
+.top{
+    display: flex;
+    background: rgb(1,34,77);
+    height:4rem;
+}
+
+.logo{
+    cursor: pointer;
+    margin-left: 2%;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.logo-image{
+    border-radius: 50%;
+    background: white;
+}
+
+.logo-head{
+    margin-top: 0.1rem;
+    margin-left:0.4rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list{
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: 1.2rem;
+}
+
+.list li{
+    margin: 0 0.7rem;
+}
+
+.list li a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+.list li button a{
+    background: rgb(216, 216, 216);
+    /* border: none; */
+    padding: 0.5rem;
+    font-size: 16px;
+    color: rgb(1,34,77);
+    border-radius: 0.2rem;
+    /* box-shadow: 1px 1px 5px rgb(145, 144, 144),0px 0px 5px white; */
+    /* transition: all 1s; */
+    text-decoration: none;
+}
+
+
+
+
+.list li button:hover{
+    background: transparent;
+    box-shadow: 1px 1px 15px 3px white,-1px -1px 15px rgb(0,111,165),1px 1px 15px white,-1px -1px 15px rgb(0,111,165);
+    /* box-shadow:  1.5px 1.5px 10px white, 1.5px 1.5px 10px rgb(145, 144, 144); */
+}

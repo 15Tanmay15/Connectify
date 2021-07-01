@@ -1,7 +1,7 @@
 <head><link rel="stylesheet" href="/css/header.css"></head>
 <header>
 
-<section id="nav">
+<!-- <section id="nav">
   <div class="container">
     <div id="title">
     <h3>CONNECTIFY</h3>
@@ -17,7 +17,28 @@
         <%}%>
     </div>
   </div>
-</section>
+</section> -->
+
+<div class="top">
+  <div class="container">
+      <div class="logo">
+          <!-- <img class="logo-image" width="35px" height="35px"> -->
+          <h2 class="logo-head">Connectify</h2>
+      </div>
+
+      <div class="lies">
+          <ul class="list">
+            <% if(!locals.user) { %>
+              <li><button><a href="/users/sign-in">Sign In</a></button></li>
+              <li><button><a href="/users/sign-up">Sign Up</a></button></li>
+            <% }else{ %>
+              <li><a href="/users/users"><%= locals.user.name %></a></li>
+              <li><button><a href="/users/sign-out">Sign Out</a></button></li>
+              <%}%>
+          </ul>
+      </div>
+  </div>
+</div>
 
 
 

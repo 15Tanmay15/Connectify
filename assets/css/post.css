@@ -1,0 +1,11 @@
+.delete-btn{
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.post-block{
+    position: relative;
+    width: 40%;
+}
+
