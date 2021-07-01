@@ -14,3 +14,13 @@
   border-left: 1px solid lightgrey;
   height: 100vh;
 }
+
+#post-textarea {
+  width: 80%;
+  height: 150px;
+}
+
+.aligning{
+  margin-top: 5%;
+  margin-left: 3%;
+}

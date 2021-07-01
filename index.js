@@ -14,7 +14,7 @@ const passportLocal = require('./config/passport-local-strategy');
 const passportJWT = require('./config/passport-jwt-strategy');
 const passportGoogle = require('./config/passport-google-oauth2-strategy');
 
-const sassMiddleware = require('node-sass-middleware');
+// const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 const MongoStore = require('connect-mongo');
@@ -27,13 +27,13 @@ const path = require('path');
 
 
 
-app.use(sassMiddleware({
-    src: path.join(__dirname, env.asset_path, 'scss'),
-    dest: path.join(__dirname, env.asset_path, 'css'),
-    debug: true,
-    outputStyle: 'expanded',
-    prefix: '/css'
-}))
+// app.use(sassMiddleware({
+//     src: path.join(__dirname, env.asset_path, 'scss'),
+//     dest: path.join(__dirname, env.asset_path, 'css'),
+//     debug: true,
+//     outputStyle: 'expanded',
+//     prefix: '/css'
+// }))
 
 app.use(express.static('./assets'));
 
@@ -55,7 +55,7 @@ app.set('views', './views');
 
 // mongostore is used to store the session cookie in the db
 app.use(session({
-    name: 'codeial',
+    name: 'connectify',
     // TODO change secret before deployment in production mode
     secret: env.session_cookie_key,
     saveUninitialized: false,
