@@ -1,5 +1,6 @@
 #home-container {
   display: flex;
+  background-color: aliceblue;
 }
 
 #home-container #feed-posts {

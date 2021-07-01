@@ -1,4 +1,61 @@
-.login{
-    position: absolute;
-    right: 1%;
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.top{
+    display: flex;
+    background: rgb(2,10,29);
+    height:3.8rem;
+}
+
+.logo{
+    margin-left: -6%;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.logo-image{
+    border-radius: 50%;
+    background: white;
+}
+
+.logo-head{
+    margin-top: 0.1rem;
+    margin-left:0.4rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.list a{
+    color: white;
+    text-decoration: none;
+}
+.list{
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: -4rem;
+    margin-top: 7%;
+}
+
+.list li{
+    margin: 0 0.7rem;
+}
+
+.list li button{
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    font-size: 16px;
+    border-radius: 0.3rem;
+    color: white;
+    box-shadow: 1px 1px 3px white,-1px -1px 3px white;
 }
