@@ -46,6 +46,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  position: absolute;
+  bottom: -35px;
 }
 
 #user-chat-box #chat-message-input-container #chat-message-input {
@@ -71,6 +73,8 @@
   position: fixed;
   bottom: 0px;
   right: 0px;
+  background-color: rgb(1,34,77);
+  color: white;
 }
 
 #chat-txt{
@@ -83,4 +87,12 @@
   position: absolute;
     right: 1px;
     top: 0px;
+}
+
+#icon{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 70px;
+  color: rgb(1,34,77);
 }

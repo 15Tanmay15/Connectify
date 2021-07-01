@@ -44,88 +44,86 @@
       let li = document.createElement('li');
       li.setAttribute("id", post._id);
       li.classList.add("post-block");
-      li.innerHTML=`<p>
+      li.append(`<p>
                       
-      <a class="delete-post-button" href="/posts/destroy/${post._id}">
-      <i style="color: red" class="far fa-trash-alt delete-btn"></i>
-    </a>
-      
-     <h2>
-      ${ post.content }
-      </h2>
-      <h4>
-      ${ post.user.name }
-      </h4>
-      <br>
-
-      <small>
-          
-              <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post">
-                  0 Likes
-              </a>
-          
-      </small>
-
-  </p>
-  <div class="post-comments">
-      
-          <form id="post-${ post._id }-comments-form" action="/comments/create" method="POST">
-              <input type="text" name="content" placeholder="Type Here to add comment..." required>
-              <input type="hidden" name="post" value="${ post._id }" >
-              <input type="submit" value="Add Comment">
-          </form>
-
-
-      <div class="post-comments-list">
-          <ul id="post-comments-${ post._id }">
-              
-          </ul>
-      </div>
-  </div>`
-
-  return li;
-      // CHANGE :: show the count of zero likes on this post
-//       return $(`<li id="post-${post._id}" class="post-block">
-//                   <p>
+                      <a class="delete-post-button" href="/posts/destroy/${post._id}">
+                      <i style="color: red" class="far fa-trash-alt delete-btn"></i>
+                    </a>
                       
-//                       <a class="delete-post-button" href="/posts/destroy/${post._id}">
-//                       <i style="color: red" class="far fa-trash-alt delete-btn"></i>
-//                     </a>
-                      
-//                      <h2>
-//                       ${ post.content }
-//                       </h2>
-//                       <h4>
-//                       ${ post.user.name }
-//                       </h4>
-//                       <br>
+                     <h2>
+                      ${ post.content }
+                      </h2>
+                      <h4>
+                      ${ post.user.name }
+                      </h4>
+                      <br>
 
-//                       <small>
+                      <small>
                           
-//                               <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post">
-//                                   0 Likes
-//                               </a>
+                              <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post">
+                                  0 Likes
+                              </a>
                           
-//                       </small>
+                      </small>
 
-//                   </p>
-//                   <div class="post-comments">
+                  </p>
+                  <div class="post-comments">
                       
-//                           <form id="post-${ post._id }-comments-form" action="/comments/create" method="POST">
-//                               <input type="text" name="content" placeholder="Type Here to add comment..." required>
-//                               <input type="hidden" name="post" value="${ post._id }" >
-//                               <input type="submit" value="Add Comment">
-//                           </form>
+                          <form id="post-${ post._id }-comments-form" action="/comments/create" method="POST">
+                              <input type="text" name="content" placeholder="Type Here to add comment..." required>
+                              <input type="hidden" name="post" value="${ post._id }" >
+                              <input type="submit" value="Add Comment">
+                          </form>
              
               
-//                       <div class="post-comments-list">
-//                           <ul id="post-comments-${ post._id }">
+                      <div class="post-comments-list">
+                          <ul id="post-comments-${ post._id }">
                               
-//                           </ul>
-//                       </div>
-//                   </div>
+                          </ul>
+                      </div>
+                  </div>`)
+      // CHANGE :: show the count of zero likes on this post
+      return $(`<li id="post-${post._id}" class="post-block">
+                  <p>
+                      
+                      <a class="delete-post-button" href="/posts/destroy/${post._id}">
+                      <i style="color: red" class="far fa-trash-alt delete-btn"></i>
+                    </a>
+                      
+                     <h2>
+                      ${ post.content }
+                      </h2>
+                      <h4>
+                      ${ post.user.name }
+                      </h4>
+                      <br>
+
+                      <small>
+                          
+                              <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post">
+                                  0 Likes
+                              </a>
+                          
+                      </small>
+
+                  </p>
+                  <div class="post-comments">
+                      
+                          <form id="post-${ post._id }-comments-form" action="/comments/create" method="POST">
+                              <input type="text" name="content" placeholder="Type Here to add comment..." required>
+                              <input type="hidden" name="post" value="${ post._id }" >
+                              <input type="submit" value="Add Comment">
+                          </form>
+             
+              
+                      <div class="post-comments-list">
+                          <ul id="post-comments-${ post._id }">
+                              
+                          </ul>
+                      </div>
+                  </div>
                   
-//               </li>`)
+              </li>`)
   }
 
 
