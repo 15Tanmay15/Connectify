@@ -3,8 +3,8 @@ class ChatEngine{
         this.chatBox = $( `#${chatBoxId}`);
         this.userEmail = userEmail;
 
-        this.socket = io.connect('https://connectify-backened.herokuapp.com/' , { transports : ['websocket'] });
-
+        // this.socket = io.connect('https://connectify-backened.herokuapp.com/' , { transports : ['websocket'] });
+        this.socket = io.connect('https://connectify-backened.herokuapp.com/');
         if(this.userEmail){
             this.connectionHandler();
         }
